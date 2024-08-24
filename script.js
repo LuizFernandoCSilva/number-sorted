@@ -29,7 +29,7 @@ sorted.addEventListener('click', (event) => {
   }
   nav.classList.add('hiden')
   form.classList.remove('hiden')
-  const numbers = resultNumber(minVal,maxVal,quantityVal)
+  const numbers = resultNumber(minVal,maxVal,quantityVal,helpselect)
   for (let i = 0; i < numbers.length; i++) {
     const newResult = document.createElement('p')
     newResult.textContent = numbers[i]
