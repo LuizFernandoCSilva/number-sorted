@@ -238,6 +238,6 @@ form.show.hiden{
 
 @media (min-width: 1024px) {
   .container{
-    width: auto; 
+    min-width: auto; 
   }
 }
