@@ -2,7 +2,7 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  width: 100%;
 }
 
 .resultN{
@@ -146,11 +146,15 @@ ul{
 nav.nav.hiden{
   display: none;
 }
+form.show{
+  width: 100%;
+}
 
 form.show .resultN{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 form.show .resultN .resultinfos {
   display: flex;
