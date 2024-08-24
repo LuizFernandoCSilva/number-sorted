@@ -78,7 +78,7 @@ body {
 
   /* Definindo a transição */
   transition: background 2s ease-in-out;
-  
+  height: 100vh;
 
 }
 
@@ -93,7 +93,7 @@ body.loaded {
   flex-direction: column;
   align-items:baseline;
  
-  height: 100vh;
+  
 }
 
 header, main, footer{
