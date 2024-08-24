@@ -60,7 +60,10 @@
   --font-family: "Inter", sans-serif;
   --text-select: 400 12px/150% var(--font-family);
 }
-
+html, body {
+  height: 100%;
+  margin: 0;
+}
 body {
   display: flex;
   justify-content: center;
