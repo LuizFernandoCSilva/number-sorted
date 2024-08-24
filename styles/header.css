@@ -1,0 +1,33 @@
+header{
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
+}
+
+header img{
+  padding-bottom: 46px;
+  width: 172px;
+}
+.write{
+  text-transform: var(--text-transform-uppercase);
+  margin-bottom: 42px;
+}
+.write h2{
+   font: var(--overline);
+   background: var(--gradient-content);
+
+   /* Cortar o background para aplicá-lo apenas ao texto */
+   -webkit-background-clip: text;
+   background-clip: text;
+ 
+   /* Definir o preenchimento do texto como transparente para que o gradiente apareça */
+   -webkit-text-fill-color: transparent;
+   margin-bottom: 8px;
+  
+}
+.write h1{
+  font: var(--display-medium);
+  color:var(--content-primary);
+  
+}

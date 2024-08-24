@@ -1,0 +1,22 @@
+footer{
+  background-image:url(../img/bg-footer.png) ;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  
+}
+footer .chat{
+  display: flex;
+  gap: 8px;
+ 
+}
+footer h3 {
+  font: var(--paragraph-medium);
+  color: var(--content-brand);
+}
+
+footer p {
+  font: var(--paragraph-small);
+  color:var(--content-primary); 
+}
+

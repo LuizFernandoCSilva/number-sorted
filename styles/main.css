@@ -1,0 +1,243 @@
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resultN{
+  width: 600px;
+}
+#info{
+  margin-bottom: 40px;
+}
+#info h2{
+  font: var(--label-large);
+  color: var(--content-primary);
+  text-transform: var(--text-transform-uppercase);
+
+}
+#info p{
+  font: var(--paragraph-medium);
+  color: var(--content-tertiary);
+}
+ul{
+  display: flex;
+  justify-content: space-between;
+}
+#number li{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 86px;
+  height: 88px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#number span{
+  margin-bottom: 4px;
+}
+
+#number span, #number input{
+  font: var(--label-medium);
+  color:var(--content-secondary);
+  text-transform: var(--text-transform-uppercase);
+}
+
+#number input {
+  background-color: var(--background-secondary);
+  color: var(--content-primary);
+  font-size: 24px;
+  display: flex;
+  border: 4px solid transparent; /* Define a borda inicial como transparente */
+  height: 56px;
+  padding: 8px 4px;
+  width: 100%;
+  text-align: center;
+  background-origin: border-box;
+  background-clip: padding-box; /* Define o fundo para recortar na borda */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+  outline: none; /* Remove a borda padrão do navegador */
+  
+   /* Remove as setas de incremento e decremento em todos os navegadores */
+   appearance: textfield;
+  
+   /* Remove as setas de incremento e decremento em navegadores WebKit (Chrome, Safari) */
+   &::-webkit-inner-spin-button,
+   &::-webkit-outer-spin-button {
+     appearance: none;
+     margin: 0;
+   }
+}
+
+#number input:hover, #number input:focus {
+  border-color: transparent; /* Mantém a borda transparente */
+  background-image: linear-gradient(var(--background-secondary), var(--background-secondary)), var(--gradient-border);
+  background-origin: border-box;
+  background-clip: padding-box, border-box; /* Mantém o gradiente visível na borda */
+  box-shadow: 0 0 5px var(--gradient-border); /* Adiciona sombra com o gradiente */
+}
+.select {
+  position: relative;
+  display: flex;
+  gap: 8px; /* Aumentei o gap para separar melhor o botão do texto */
+  align-items: center;
+  margin-bottom: 41px;
+}
+
+.select button {
+  position: relative;
+  width: 40px; /* Aumentei a largura para dar mais espaço à bolinha */
+  height: 20px; /* Aumentei a altura para acomodar melhor a bolinha */
+  background: var(--gradient-background);
+  border: none;
+  border-radius: 16px;
+  font-size: 0;
+  padding: 0; /* Remove padding para evitar interferências no layout */
+}
+
+.toogle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--content-primary); 
+  width: 19px; /* Ajuste o tamanho da bolinha */
+  height: 19px;
+  left: 2px; /* Posição inicial na esquerda */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%);
+  transition: left 0.3s ease; /* Animação suave */
+}
+.select.active .toogle {
+  left: calc(100% - 19px); /* Mover para a direita do botão */
+}
+#repeat{
+  font: var(--text-select);
+  color: var(--content-primary);
+  font-size: 12px;
+}
+
+.sorted button{
+  font: var(--label-medium);
+  text-transform:var(--text-transform-uppercase) ;
+  background-color: var(--background-tertiary);
+  border: 4px solid transparent; 
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--content-primary);
+  gap: 8px;
+  margin-bottom: 80px;
+  background-origin: border-box;
+  background-clip: padding-box; /* Define o fundo para recortar na borda */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+  outline: none; /* Remove a borda padrão do navegador */
+}
+.sorted button:hover, .sorted button:focus {
+  border-color: transparent; /* Mantém a borda transparente */
+  background-image: linear-gradient(var(--background-secondary), var(--background-secondary)), var(--gradient-border);
+  background-origin: border-box;
+  background-clip: padding-box, border-box; /* Mantém o gradiente visível na borda */
+  box-shadow: 0 0 5px var(--gradient-border); /* Adiciona sombra com o gradiente */
+}
+
+nav.nav.hiden{
+  display: none;
+}
+
+form.show .resultN{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form.show .resultN .resultinfos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+form.show h2{
+  font: var(--label-large);
+  color: var(--content-primary);
+  text-transform: var(--text-transform-uppercase);
+}
+form.show .resultN .resultinfos p {
+  font: var(--overline);
+  color: var(--content-secondary);
+  text-transform: var(--text-transform-uppercase);
+}
+form.show .resultN .resultnumbers{
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Permite quebra de linha */
+  gap: 40px;
+  width: 100%;
+  justify-content: center;
+}
+
+form.show .resultN .resultnumbers p{
+  font: var(--overline);
+  color: var(--content-brand);
+  font-size: 40px;
+  padding-inline:15px ;
+  background-color: var(--background-secondary);
+}
+
+#result{
+  font: var(--label-medium);
+  text-transform:var(--text-transform-uppercase) ;
+  background-color: var(--background-tertiary);
+  border: 4px solid transparent; 
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--content-primary);
+  gap: 8px;
+  margin-bottom: 80px;
+  background-origin: border-box;
+  background-clip: padding-box; /* Define o fundo para recortar na borda */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Animação suave */
+  outline: none; /* Remove a borda padrão do navegador */
+}
+#result:hover, #result:focus {
+  border-color: transparent; /* Mantém a borda transparente */
+  background-image: linear-gradient(var(--background-secondary), var(--background-secondary)), var(--gradient-border);
+  background-origin: border-box;
+  background-clip: padding-box, border-box; /* Mantém o gradiente visível na borda */
+  box-shadow: 0 0 5px var(--gradient-border); /* Adiciona sombra com o gradiente */
+}
+form.show.hiden{
+  display: none;
+}
+
+@media (max-width:380){
+  .container{
+    width: 300px;
+  }
+}
+@media (max-width:541px){
+  .container{
+    width: 400px;
+    padding-inline: 16px;
+  }
+}
+@media (max-width:767px){
+  .container{
+    width: 500px;
+  }
+}
+@media (min-width: 768px) {
+  .container{
+    width: 700px; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .container{
+    width: 900px; 
+  }
+}

@@ -1,0 +1,98 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /* Colors */
+  --content-primary:#FFFFFF;
+  --content-secondary:#C7C9CC;
+  --content-tertiary:#D9D9D9;
+  --content-brand:#C58DE7;
+  --color-inverse: #030203;
+
+  /* Backgroud-Colors */
+  --background-primary:#020202;
+  --background-secondary:#1e1d1f;
+  --background-tertiary:#24222E;
+  --background-brand:#C58DE7;
+  --background-gray:#3D3D3D;
+
+  /*Acents */
+  --accent-pink:#D586E0;
+  --accent-blue:#91A1FA;
+  --accent-green:#77C0AA;
+  --accent-lime: #D1DC97;
+  --accent-red:#E9A9B3;
+
+  /*Gradients */
+  --gradient-border: linear-gradient(90deg, 
+  #77C0AF 0%, 
+  #D1DC97 14.84%, 
+  #E9A9B3 32.15%, 
+  #D586E0 65.79%, 
+  #91A1FA 84.58%
+);
+--gradient-background:linear-gradient(90deg,
+  #D586E0 0%,
+  #91A1FA 98.93%
+  );
+
+--gradient-content: linear-gradient(90deg,
+  rgb(223, 227, 232) 0%, 
+  #3D3D3D 100%);
+
+  /* Fonts */
+  --font-family1: "Sora", sans-serif;
+  --display-large: 800 72px/130% var(--font-family1);
+  --display-medium: 800 40px/130% var(--font-family1);
+  --display-small: 700 32px/130% var(--font-family1);
+  --text-transform-uppercase: uppercase;
+  --font-family2: "Roboto Mono", monospace;
+  --overline: 700 16px/150% var(--font-family2);
+  --font-family3:"Roboto Flex", sans-serif;
+  --paragraph-large: 500 16px/150% var(--font-family3);
+  --paragraph-medium: 500 14px/150% var(--font-family3); 
+  --paragraph-small: 500 12px/150% var(--font-family3);
+  --label-large: 700 20px/150% var(--font-family3);
+  --label-medium: 700 16px/150% var(--font-family3);
+  --font-family: "Inter", sans-serif;
+  --text-select: 400 12px/150% var(--font-family);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  /* Definindo a cor de fundo inicial */
+  background-color: var(--background-primary);
+
+  /* Adicionando a imagem de fundo */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 50%), url(../img/bg-footer.png);
+  
+  /* Ajustes da imagem de fundo */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* Definindo a transição */
+  transition: background 2s ease-in-out;
+  
+
+}
+
+/* Quando a página estiver carregada, aplicamos a transição */
+body.loaded {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 50%), url(../img/bg-footer.png);
+}
+.container{
+  padding-block: 44px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items:baseline;
+}
+
+header, main, footer{
+  padding-inline: 36px;
+}
