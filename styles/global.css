@@ -64,6 +64,7 @@
 body {
   display: flex;
   justify-content: center;
+  
   /* Definindo a cor de fundo inicial */
   background-color: var(--background-primary);
 
@@ -91,8 +92,22 @@ body.loaded {
   display: flex;
   flex-direction: column;
   align-items:baseline;
+ 
+  
 }
 
 header, main, footer{
   padding-inline: 36px;
+}
+
+@media (min-width: 1024px) {
+  .container{
+    padding-left: 100px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container{
+    padding-inline: 80px;
+  }
 }
