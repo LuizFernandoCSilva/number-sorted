@@ -2,6 +2,7 @@ main{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100vw;
 }
 
 .resultN{
@@ -236,8 +237,3 @@ form.show.hiden{
   }
 }
 
-@media (min-width: 1024px) {
-  .container{
-    min-width: auto; 
-  }
-}
